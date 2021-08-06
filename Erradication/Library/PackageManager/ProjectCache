@@ -5,21 +5,70 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637626827838780328
-    m_Hash: 1079327390
+      ticks: 637635501570521495
+    m_Hash: 4140242011
   m_LockFileStatus:
     m_FilePath: D:/GitHub/School (summer-post)/Summer/SummerIT265/Erradication/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637626827840110625
-    m_Hash: 1489972213
+      ticks: 637635501571091617
+    m_Hash: 3279846498
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
   m_Packages:
     m_ResolvedPackages:
+    - packageId: com.febucci.custom-hierarchy@https://github.com/febucci/unitypackage-custom-hierarchy.git
+      testable: 0
+      isDirectDependency: 1
+      version: 1.1.0
+      source: 5
+      resolvedPath: D:\GitHub\School (summer-post)\Summer\SummerIT265\Erradication\Library\PackageCache\com.febucci.custom-hierarchy@b7da93eeda
+      assetPath: Packages/com.febucci.custom-hierarchy
+      name: com.febucci.custom-hierarchy
+      displayName: Custom Hierarchy for Unity
+      author:
+        name: Febucci
+        email: 
+        url: https://www.febucci.com/
+      category: 
+      type: 
+      description: "This package lets you draw a clearer Hierarchy in Unity, organizing
+        everything in a \u201Ctree view\u201D and including extra informations like
+        Components Icons and groups/divisors"
+      status: 4
+      errors: []
+      versions:
+        all: []
+        compatible: []
+        verified: 
+      dependencies: []
+      resolvedDependencies: []
+      keywords:
+      - hierarchy
+      - febucci
+      registry:
+        id: 
+        name: 
+        url: 
+        scopes: []
+        isDefault: 0
+        capabilities: 0
+      hasRegistry: 0
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 0
+      documentationUrl: 
+      hasRepository: 0
+      repository:
+        type: 
+        url: 
+        revision: 
+        path: 
     - packageId: com.unity.2d.animation@5.0.5
       testable: 0
       isDirectDependency: 1
@@ -101,6 +150,7 @@ m_PackageAssets:
         - 6.0.3
         - 6.0.4
         - 7.0.0-pre.2
+        - 7.0.0-pre.3
         compatible:
         - 5.0.5
         - 5.0.6
@@ -293,6 +343,7 @@ m_PackageAssets:
         - 5.0.4
         - 6.0.0-pre.2
         - 6.0.0-pre.3
+        - 6.0.0-pre.4
         compatible:
         - 4.0.2
         - 4.1.0
@@ -3498,6 +3549,7 @@ m_PackageAssets:
         - 5.0.0
         - 6.0.0-pre.2
         - 6.0.0-pre.3
+        - 6.0.0-pre.4
         compatible:
         - 4.0.2
         - 4.0.3

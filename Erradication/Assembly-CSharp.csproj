@@ -54,6 +54,13 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\SceneUpdateManager.cs" />
      <Compile Include="Assets\Scripts\MenuManager.cs" />
+     <Compile Include="Assets\Scripts\Continent.cs" />
+     <Compile Include="Assets\Scripts\ContinentDisplay.cs" />
+     <Compile Include="Assets\Scripts\PlayerScriptable.cs" />
+     <Compile Include="Assets\Scripts\PlayerStats.cs" />
+     <Compile Include="Assets\Scripts\GameProgression.cs" />
+     <Compile Include="Assets\Scripts\UpgradeMenu.cs" />
+     <Compile Include="Assets\Scripts\DifficultyManager.cs" />
  <Reference Include="UnityEngine">
  <HintPath>D:/Unity/Editor_2/2020.3.12f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
