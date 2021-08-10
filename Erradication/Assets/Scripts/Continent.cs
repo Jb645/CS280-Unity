@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 using UnityEngine;
 
 namespace eradication
@@ -11,6 +12,12 @@ namespace eradication
         public int attack;
         public int health = 100;
         public bool conquered = false;
+
+        public void Start()
+        {
+            health = 100;
+            if(!IsItAntartica()) conquered = false;
+        }
         
         public void Conquer()
         {
@@ -19,11 +26,24 @@ namespace eradication
 
         public int DamagePlayer()
         {
-            return !conquered ? attack : 0;
+            if (!IsItAntartica()) return !conquered ? attack : 0;
+            Debug.Log("is antartica");
+            return -10; //player heals
         }
 
+        public bool IsItAntartica()
+        {
+            return name == "Antartica";
+        }
+        
         public void ContinentTakeDamage(int playerAttack)
         {
+            if (health <= 0) //checking fi the health of continent is not less than 0
+            {
+                health = 0;
+                Conquer();
+                return;
+            }
             health -= playerAttack;
         }
     }

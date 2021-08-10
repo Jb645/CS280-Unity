@@ -2,34 +2,40 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 namespace eradication
 {
     public class DifficultyManager : MonoBehaviour
     {
-        public int totalTurns;
-        public enum Difficulty
+        public static  int TotalTurns;
+        private static bool _startedFromMenu = false;
+        private enum Difficulty
         {
             Easy, Medium, Hard
         }
 
-        [SerializeField] private Difficulty current = Difficulty.Easy;
+        [SerializeField] private Difficulty currentDifficulty = Difficulty.Easy;
 
         private void Start()
         {
-            totalTurns = 30;//default
+            if (!_startedFromMenu)
+            {
+                TotalTurns = 30;//default
+            }
         }
 
-        public void ChangeDifficulty(Difficulty desiredDifficulty)
+        public void ChangeDifficulty(int desiredDifficulty)
         {
-            current = desiredDifficulty;
-            totalTurns = current switch
+            currentDifficulty = (Difficulty)desiredDifficulty;
+            TotalTurns = currentDifficulty switch
             {
                 Difficulty.Easy => 30,
                 Difficulty.Medium => 20,
                 Difficulty.Hard => 15,
-                _ => totalTurns
+                _ => TotalTurns
             };
+            _startedFromMenu = true;
+            SceneManager.LoadScene("Game");
         }
     }
 }
