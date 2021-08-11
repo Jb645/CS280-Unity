@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: South America
   attack: 10
-  health: 0
+  health: 100
   conquered: 0

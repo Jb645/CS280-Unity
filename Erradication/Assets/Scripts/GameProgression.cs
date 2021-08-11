@@ -20,8 +20,8 @@ namespace eradication
         public ContinentDisplay continents;
         public Text winOrLoseText;
         public GameObject results;
-        [SerializeField] private int passiveEvoIncrease = 1;
         public Text turnsText;
+        
 
         enum PlayerCondition
         {
@@ -65,11 +65,11 @@ namespace eradication
             turnsText.text = $"Turns: {turn.ToString()}/{DifficultyManager.TotalTurns}";
 
             //check how many continents are conquered
-            var totalContinentConquered = 
-                continents.continentArray.TakeWhile(continent => continent.conquered).Count();
-            var totalEvosGained = passiveEvoIncrease + totalContinentConquered;
+            var totalContinentConquered = continents.continentArray.Count(continent => continent.conquered);
+            
+            //var totalEvosGained = passiveEvoIncrease + totalContinentConquered;
             //give player points depending on the places conquered and passive gain
-            player.ChangeEvos(totalEvosGained);
+            player.ChangeEvos(totalContinentConquered);
             
             //make player take damage
             

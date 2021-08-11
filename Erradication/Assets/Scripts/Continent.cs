@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace eradication
 {
@@ -15,18 +16,19 @@ namespace eradication
 
         public void Start()
         {
+            if (IsItAntartica()) return;
             health = 100;
-            if(!IsItAntartica()) conquered = false;
+            conquered = false;
         }
-        
-        public void Conquer()
+
+        private void Conquer()
         {
             conquered = true;
         }
 
         public int DamagePlayer()
         {
-            if (!IsItAntartica()) return !conquered ? attack : 0;
+            if (!IsItAntartica()) return !conquered ? attack : -10;
             Debug.Log("is antartica");
             return -10; //player heals
         }
@@ -41,7 +43,10 @@ namespace eradication
             if (health <= 0) //checking fi the health of continent is not less than 0
             {
                 health = 0;
-                Conquer();
+                if (!conquered)
+                {
+                    Conquer();
+                }
                 return;
             }
             health -= playerAttack;

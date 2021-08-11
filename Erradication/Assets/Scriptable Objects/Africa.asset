@@ -15,3 +15,4 @@ MonoBehaviour:
   name: Africa
   attack: 10
   health: 100
+  conquered: 0
