@@ -61,6 +61,7 @@
      <Compile Include="Assets\Scripts\MenuManager.cs" />
      <Compile Include="Assets\Scripts\PlayerScriptable.cs" />
      <Compile Include="Assets\Scripts\GameProgression.cs" />
+     <Compile Include="Assets\Scripts\SoundManager.cs" />
  <Reference Include="UnityEngine">
  <HintPath>D:/Unity/Editor_2/2020.3.12f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
